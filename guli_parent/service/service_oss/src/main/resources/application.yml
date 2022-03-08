@@ -1,0 +1,20 @@
+server:
+    port: 8002
+spring:
+    application:
+        name: servcie-oss
+    profiles:
+        active: dev
+    cloud:
+        nacos:
+            discovery:
+                server-addr: 127.0.0.1:8848
+
+# 阿里云oss配置
+aliyun:
+    oss:
+        file:
+            endpoint:
+            key-id:
+            key-secrete:
+            bucket-name:

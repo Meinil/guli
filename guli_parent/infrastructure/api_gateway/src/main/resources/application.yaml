@@ -1,0 +1,53 @@
+server:
+    port: 8000
+spring:
+    application:
+        name: service-gateway
+    profiles:
+        active: dev
+    cloud:
+        nacos:
+            discovery:
+                server-addr: 127.0.0.1:8848
+        gateway:
+            discovery:
+                locator:
+                    # 服务发现路由
+                    enabled: true
+            routes:
+                - id: service-acl           # 路由id
+                  uri: lb://service-acl     # nacos中注册的服务名称
+                  predicates:               # 路由断言
+                      - Path=/*/acl/**
+                - id: service-cms
+                  uri: lb://service-cms
+                  predicates:
+                      - Path=/educms/**
+                - id: service-edu
+                  uri: lb://service-edu
+                  predicates:
+                      - Path=/eduservice/**
+                - id: service-email
+                  uri: lb://server-email
+                  predicates:
+                      - Path=/edumail/**
+                - id: service-order
+                  uri: lb://service-order
+                  predicates:
+                      - Path=/eduorder/**
+                - id: servcie-oss
+                  uri: lb://servcie-oss
+                  predicates:
+                      - Path=/eduoss/**
+                - id: service-statistics
+                  uri: lb://service-statistics
+                  predicates:
+                      - Path=/staservice/**
+                - id: service-ucenter
+                  uri: lb://service-ucenter
+                  predicates:
+                      - Path=/educenter/**
+                - id: service-vod
+                  uri: lb://service-vod
+                  predicates:
+                      - Path=/eduvod/**

@@ -1,0 +1,37 @@
+server:
+    port: 8007
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/guli?serverTimezone=GMT%2B8&characterEncoding=utf-8
+        username: root
+        password: 123456
+    profiles:
+        active: dev
+    application:
+        name: service-order
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: GMT+8
+    # 服务发现
+    cloud:
+        nacos:
+            discovery:
+                server-addr: 127.0.0.1:8848
+# 开启熔断机制
+feign:
+    hystrix:
+        enabled: true
+
+wechat:
+    pay:
+        #关联的公众号appid
+        appid: wx74862e0dfcf69954
+        #商户号
+        partner: 1558950191
+        #商户key
+        partner-key: T6m9iK73b0kn9g5v426MKfHQH7X8rKwb
+        #回调地址
+        notify-url: http://guli.shop/api/order/weixinPay/weixinNotify
+        # 订单ip
+        addr: 127.0.0.1

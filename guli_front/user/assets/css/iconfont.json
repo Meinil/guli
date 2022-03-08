@@ -1,0 +1,51 @@
+{
+  "id": "3220300",
+  "name": "incofont",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "712645",
+      "name": "phone",
+      "font_class": "phone",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "1235507",
+      "name": "qq",
+      "font_class": "qq",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "2890720",
+      "name": "weichat",
+      "font_class": "weichat",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "3703958",
+      "name": "password-icon",
+      "font_class": "password-icon",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "11983543",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "ea0b",
+      "unicode_decimal": 59915
+    },
+    {
+      "icon_id": "15838547",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e682",
+      "unicode_decimal": 59010
+    }
+  ]
+}
